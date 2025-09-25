@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="val">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sender dels Nombres Romans</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>El Sender dels Nombres Romans</h1>
+            <p class="subtitle">Lasgol, domina els antics nombres de Tremia</p>
+        </header>
+
+        <div class="game-area">
+            <div class="level-info">
+                <h2 id="level-title">El fill del traïdor</h2>
+                <div class="progress">
+                    <span id="level-counter">Nivell 1 de 20</span>
+                    <span id="question-counter">Pregunta 1 de 5</span>
+                </div>
+            </div>
+
+            <div class="question-area">
+                <div class="question-box">
+                    <p id="question-text">Converteix aquest nombre:</p>
+                    <div class="number-display" id="number-display">MCMXC</div>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="answer-input" placeholder="Escriu la teua resposta..." autocomplete="off">
+                    <button id="submit-btn">Comprovar</button>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <div class="controls">
+                <button id="help-btn" class="secondary-btn">Ajuda</button>
+                <button id="next-level-btn" class="hidden">Següent Nivell</button>
+            </div>
+        </div>
+
+        <div class="help-modal hidden" id="help-modal">
+            <div class="modal-content">
+                <h3>Regles dels Nombres Romans</h3>
+                <div class="rules">
+                    <p><strong>Símbols bàsics:</strong></p>
+                    <ul>
+                        <li>I = 1</li>
+                        <li>V = 5</li>
+                        <li>X = 10</li>
+                        <li>L = 50</li>
+                        <li>C = 100</li>
+                        <li>D = 500</li>
+                        <li>M = 1000</li>
+                    </ul>
+                    <p><strong>Regles:</strong></p>
+                    <ul>
+                        <li>Els símbols es sumen de dreta a esquerra</li>
+                        <li>Si un símbol menor està a l'esquerra d'un major, es resta</li>
+                        <li>Només I, X i C poden restar-se</li>
+                        <li>No es pot repetir més de 3 vegades el mateix símbol</li>
+                    </ul>
+                </div>
+                <button id="close-help">Tancar</button>
+            </div>
+        </div>
+
+        <div class="completion-modal hidden" id="completion-modal">
+            <div class="modal-content">
+                <h3>Nivell Completat!</h3>
+                <p id="completion-message"></p>
+                <button id="continue-btn">Continuar</button>
+            </div>
+        </div>
+
+        <div class="final-modal hidden" id="final-modal">
+            <div class="modal-content">
+                <h3>🎉 Felicitats! 🎉</h3>
+                <p>Has dominat els antics nombres de Tremia i completat el Sender del Guardabosc!</p>
+                <button id="restart-btn">Començar de Nou</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
